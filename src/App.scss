@@ -1,0 +1,103 @@
+.app {
+  text-align: center;
+  &-header {
+    background-color: #d9f2fc;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.363);
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #d9f2fc;
+    background: linear-gradient(-170deg, white, transparent 70%);
+  }
+}
+
+.form {
+  &-container {
+    width: 300px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+
+    .field {
+      &-container {
+        min-height: 40px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      &-label {
+        width: 40%;
+        margin-right: 10px;
+        text-align: start;
+      }
+      &-input {
+        width: 60%;
+        height: 30px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #dfdede;
+        &:focus {
+          border-bottom: 2px solid #06adf0;
+          border-radius: 4px;
+          box-shadow: 0 0 3pt 1pt #06adf0;
+        }
+      }
+      &-checkbox {
+        position: relative;
+        right: 150px;
+      }
+    }
+  }
+  &-submit {
+    height: 40px;
+    width: 120px;
+    margin-top: 10px;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    box-shadow: none;
+    background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+        inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    &:disabled {
+      opacity: 0.4;
+      &:hover {
+        cursor: initial;
+      }
+    }
+  }
+}
